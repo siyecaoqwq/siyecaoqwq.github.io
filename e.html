@@ -1,0 +1,39 @@
+<body background="0.jpg">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入密码以访问</title>
+    <script type="text/javascript">
+        function password() {
+            var testV = 1;
+            var pass1 = prompt('Sorry,此路是我开，此树是我栽，要想从此过，留下过路码','');
+            while (testV < 3) {
+                if (!pass1)
+                    history.go(-1);
+                if (pass1 == "1024") {//1234543
+                    alert('啊！口令竟然对了，难道……你是九世龙尊！参见龙王殿下！ORZ✔✔✔');
+                    window.location.href="3.html";//修改需要密码认证的网页
+                    break;
+                }
+                testV+=1;
+                var pass1 =
+                    prompt('FBI！马上就到你家门口~40米长的大刀收不住了','');
+            }
+            if (pass1!="password" & testV ==3)
+                history.go(-1);
+            return " ";
+        }
+        document.write(password());
+    </script>
+    <script type="text/javascript">
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+                //跳转移动端页面
+                window.location.href="http://47.119.129.143//phone.html";
+            }
+        }
+        browserRedirect();
+    </script>
+
